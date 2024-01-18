@@ -9,6 +9,7 @@ export interface User {
 
 export const useAuthStore = defineStore("auth", () => {
   const errors = ref({});
+  const Company = ref(10);
   const user = ref<User>({} as User);
 
   function setAuth(authUser: User) {
@@ -53,6 +54,7 @@ export const useAuthStore = defineStore("auth", () => {
   return {
     errors,
     user,
+    Company,
     login,
     logout,
     register,
